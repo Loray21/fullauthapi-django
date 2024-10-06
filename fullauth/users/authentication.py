@@ -1,7 +1,7 @@
-from rest_framework_simplejwt.authentication import  JWTAuthentification
+from rest_framework_simplejwt.authentication import JWTAuthentication
 from django.conf import settings
 
-class CustomJwtAuthentication(JWTAuthentification):
+class CustomJwtAuthentication(JWTAuthentication):
     def authenticate(self, request):
         try:
             header = self.get_header(request)
